@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horarios de Clases - Institución Educativa</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px 0;
+        }
+
+        .table-container {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: white;
+            max-width: 900px;
+            width: 100%;
+            margin: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 16px;
+        }
+
+        /* Encabezados principales */
+        th {
+            background-color: #799ca8;
+            color: #1a2a3a;
+            font-weight: bold;
+            padding: 14px;
+            border: 1px solid #5a7d89;
+            text-transform: uppercase;
+            font-size: 15px;
+        }
+
+        th:first-child {
+            width: 18%;
+        }
+
+        /* Celdas comunes */
+        td {
+            padding: 12px 15px;
+            border: 1px solid #b0bec5;
+            font-weight: 500;
+            color: #2c3e50;
+        }
+
+        /* Columna de Horas */
+        td:first-child {
+            background-color: #ffffff;
+            text-align: right;
+            font-weight: bold;
+            color: #333;
+            border-right: 3px double #799ca8; /* Imita la doble línea de la segunda imagen */
+        }
+
+        /* Fila de Parqueaderos / Especiales */
+        tr.row-gris-azul th {
+            background-color: #a3bdc6;
+            color: #2c3e50;
+            font-weight: bold;
+            text-transform: none;
+            font-size: 16px;
+        }
+        tr.row-gris-azul td {
+            background-color: #a3bdc6;
+            font-weight: bold;
+        }
+
+        /* --- CÓDIGO DE COLORES POR ASIGNATURA --- */
+        
+        /* Horario Tarde 9 */
+        .algebra-91 { background-color: #f39c12; color: #000; } /* Naranja */
+        .algebra-92 { background-color: #c0392b; color: #fff; } /* Rojo oscuro */
+        .geometria-9 { background-color: #d9534f; color: #fff; } /* Rojo claro / rosado */
+        .estadistica-9 { background-color: #f1c40f; color: #000; }/* Amarillo */
+        .grupo-especial { background-color: #fef5e7; color: #333; } /* Crema */
+
+        /* Horario Mañana 8 */
+        .algebra-83 { background-color: #39ff14; color: #000; } /* Verde neón / brillante */
+        .algebra-84 { background-color: #4a90e2; color: #fff; } /* Azul claro/medio */
+        .geometria-8 { background-color: #d9534f; color: #fff; } /* Rojo claro / rosado */
+        .estadistica-8 { background-color: #f39c12; color: #000; }/* Naranja/Amarillo tostado */
+
+        /* Comunes */
+        .blanco-comun { background-color: #ffffff; color: #333; }
+        .aseo { background-color: #e0e6e8; color: #333; } /* Gris muy suave para aseo */
+
+    </style>
+</head>
+<body>
+
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Tarde 9</th>
+                <th>MIERCOLES</th>
+                <th>JUEVES</th>
+                <th>VIERNES</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>12:55</td>
+                <td class="algebra-91">9-1 Algebra</td>
+                <td class="blanco-comun">Preparacion clases</td>
+                <td class="algebra-92">9-2 Algebra</td>
+            </tr>
+            <tr>
+                <td>1:50</td>
+                <td class="blanco-comun">Preparacion clases</td>
+                <td class="algebra-91">9-1 Algebra</td>
+                <td class="geometria-9">9-3 Geometria</td>
+            </tr>
+            <tr>
+                <td>2:45</td>
+                <td class="grupo-especial">3:30- 3:50 grupo 91</td>
+                <td class="algebra-92">9-2 Algebra</td>
+                <td class="algebra-91">9-1 Algebra</td>
+            </tr>
+            <tr class="row-gris-azul">
+                <td>3:40</td>
+                <td>Parqueaderos</td>
+                <td>Parqueaderos-tarima</td>
+                <td>Parqueaderos</td>
+            </tr>
+            <tr>
+                <td>4:10</td>
+                <td class="blanco-comun">Padres-acudientes</td>
+                <td class="geometria-9">9-1 geometria</td>
+                <td class="blanco-comun">Preparacion clases</td>
+            </tr>
+            <tr>
+                <td>5:05</td>
+                <td class="algebra-91">9-1 Algebra</td>
+                <td class="algebra-92">9-2 Algebra</td>
+                <td class="blanco-comun">Preparacion clases</td>
+            </tr>
+            <tr>
+                <td>6:00</td>
+                <td class="geometria-9">9-2 Geometria</td>
+                <td class="estadistica-9">9-1 Estadistica</td>
+                <td class="algebra-92">9-2 Algebra</td>
+            </tr>
+            <tr class="row-gris-azul">
+                <td>6:55</td>
+                <td>ASEO</td>
+                <td>ASEO</td>
+                <td>ASEO</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Mañana 8</th>
+                <th>LUNES</th>
+                <th>MARTES</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>6:40</td>
+                <td class="algebra-83">8-3 Algebra Salón3</td>
+                <td class="algebra-84">8-4 Algebra Salón8</td>
+            </tr>
+            <tr>
+                <td>7:35</td>
+                <td class="algebra-84">8-4 Algebra Salón3</td>
+                <td class="geometria-8">8-4 Geometria S11</td>
+            </tr>
+            <tr>
+                <td>8:30</td>
+                <td class="estadistica-8">8-4 Estadistica S12</td>
+                <td class="algebra-83">8-3 Algebra S8</td>
+            </tr>
+            <tr class="row-gris-azul">
+                <td>9:25</td>
+                <td>Parqueaderos-tarima</td>
+                <td>Parqueaderos</td>
+            </tr>
+            <tr>
+                <td>9:55</td>
+                <td class="blanco-comun">Padres-acudientes</td>
+                <td class="algebra-83">8-3 Algebra S8</td>
+            </tr>
+            <tr>
+                <td>10:50</td>
+                <td class="algebra-84">8-4 Algebra S7</td>
+                <td class="algebra-84">8-4 Algebra S8</td>
+            </tr>
+            <tr>
+                <td>11:45</td>
+                <td class="algebra-83">8-3 Algebra S7</td>
+                <td class="blanco-comun">Preparacion clases</td>
+            </tr>
+            <tr class="row-gris-azul">
+                <td>12:40</td>
+                <td>ASEO</td>
+                <td>ASEO</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
